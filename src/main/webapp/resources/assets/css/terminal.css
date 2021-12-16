@@ -1,0 +1,116 @@
+#termcontent{
+    float: right;
+    position: absolute;
+    right: 0;
+    left: 50%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+#term{
+    background-color: inherit;
+    height: 100%;
+    overflow-y: scroll;
+}
+.terminal-wrapper{
+    background-color: inherit;
+}
+#view{
+    color: white;
+    width:50%;
+    float: left;
+    position: absolute;
+    overflow-y: hidden;
+    height: 100vh;
+}
+#viewcontent{
+    overflow: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: monospace;
+    font-size: calc(var(--size, 1)*9px) !important;
+}
+#dragbar{
+    position: absolute;
+    left: 99%;
+    background-color: #49b8ff00;
+    height:100vh;
+    float: right;
+    width: 5px;
+    cursor: col-resize;
+}
+:root {
+    --background: #222222;
+    --size: 1.5;
+}
+
+.terminal {
+    text-shadow: 0 0.2rem 1rem #7c7d7d;
+}
+
+.tv {
+    height: 100vh;
+    position: relative;
+}
+.tv.collapse {
+    animation: size 2s ease-out;
+    animation-fill-mode: forwards;
+}
+.tv.collapse:before {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.cmd, .cmd div, .cmd span, .terminal, .terminal-output>:not(.raw) a, .terminal-output>:not(.raw) div, .terminal-output>:not(.raw) span {
+    font-size: calc(var(--size, 1)*9px) !important;
+}
+
+/*Logger css */
+
+body{
+    font-family: monospace;
+    margin: 0;
+    background: black;
+}
+
+.symbols-span{
+    margin-left: 5px;
+    font-size: smaller;
+    color: black;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.shell{
+    height: inherit;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.shell-body-logger {
+    margin-left: 12px;
+    list-style: none;
+    color: #45D40C;
+    font: calc(var(--size, 1)*8px) 'Andale Mono', Consolas, 'Courier New';
+    margin-bottom: 50px;
+}
+
+.shell-body li:before {
+    content: '$';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.shell-body li {
+    word-wrap: break-word;
+    position: relative;
+    padding: 0 0 0 15px;
+}
